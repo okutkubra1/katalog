@@ -90,8 +90,6 @@
     modeBook: document.getElementById("modeBook"),
     btnOpenBook: document.getElementById("btnOpenBook"),
     btnResetFilters: document.getElementById("btnResetFilters"),
-    btnPrintTop: document.getElementById("btnPrintTop"),
-    btnPrintBottom: document.getElementById("btnPrintBottom"),
     scrollTopBtn: document.getElementById("scrollTopBtn"),
     statCount: document.getElementById("statCount"),
     statBrands: document.getElementById("statBrands"),
@@ -470,20 +468,6 @@
     }
   }
 
-  // PDF / Yazdır Hazırlığı (Sayfa modundaysa geçici olarak tüm koleksiyonu hazırlar)
-  function triggerPrint() {
-    const prevView = state.view;
-    if (prevView !== "grid") {
-      state.view = "grid";
-      render();
-    }
-    window.print();
-    if (prevView !== "grid") {
-      state.view = prevView;
-      render();
-    }
-  }
-
   // Olay Dinleyicileri
   els.modeGrid.addEventListener("click", () => {
     state.view = "grid";
@@ -539,9 +523,6 @@
     state.spreadIndex += 1;
     render();
   });
-
-  els.btnPrintTop.addEventListener("click", triggerPrint);
-  els.btnPrintBottom.addEventListener("click", triggerPrint);
 
   // Kapak kolaj kartlarına tıklayınca ürünü aç
   document.querySelectorAll("[data-open-id]").forEach((el) => {
