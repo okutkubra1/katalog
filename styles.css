@@ -107,6 +107,12 @@ a {
   color: var(--gold);
 }
 
+.masthead-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .btn-ghost {
   display: inline-flex;
   align-items: center;
@@ -120,6 +126,10 @@ a {
   font-weight: 500;
   cursor: pointer;
   transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-ghost-subtle {
+  background: transparent;
 }
 
 .btn-ghost:hover {
@@ -265,6 +275,38 @@ a {
   width: 1px;
   height: 34px;
   background: var(--border-strong);
+}
+
+/* Kapak İletişim Şeridi */
+.cover-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin-top: 24px;
+}
+
+.contact-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--border);
+  font-size: 12.5px;
+  color: var(--ink-secondary);
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.contact-chip svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.contact-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--surface);
 }
 
 /* Kapak Fotoğraf Kolajı */
@@ -1152,11 +1194,33 @@ a {
 }
 
 .modal-desc {
-  margin: 0 0 32px;
+  margin: 0 0 22px;
   font-size: 15px;
   line-height: 1.75;
   color: var(--ink-secondary);
   flex: 1;
+}
+
+.modal-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  padding: 12px 18px;
+  margin-bottom: 18px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-whatsapp:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
 }
 
 .modal-nav {
@@ -1198,7 +1262,70 @@ a {
 .catalog-footer {
   background: var(--surface);
   border-top: 1px solid var(--border);
-  padding: 44px 0 36px;
+  padding: 48px 0 36px;
+}
+
+.footer-contact-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 34px 32px;
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.footer-contact-title {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.3rem);
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.footer-contact-sub {
+  margin: 0 auto 26px;
+  max-width: 520px;
+  font-size: 14px;
+  color: var(--ink-secondary);
+}
+
+.footer-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 18px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-box:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-box-label {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.contact-box-value {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--ink);
+  word-break: break-word;
 }
 
 .footer-brands {
@@ -1449,8 +1576,17 @@ a {
   }
 
   .masthead-issue,
-  .masthead-dot {
+  .masthead-dot,
+  .btn-ghost-subtle {
     display: none;
+  }
+
+  .footer-contact-card {
+    padding: 24px 18px;
+  }
+
+  .footer-contact-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1575,5 +1711,15 @@ a {
   .catalog-footer {
     break-before: avoid;
     padding: 10mm 0 0;
+  }
+
+  .footer-contact-card {
+    padding: 6mm;
+    margin-bottom: 6mm;
+    break-inside: avoid;
+  }
+
+  .footer-contact-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
   }
 }

@@ -106,6 +106,7 @@
     modalTitle: document.getElementById("modalTitle"),
     modalTag: document.getElementById("modalTag"),
     modalDesc: document.getElementById("modalDesc"),
+    modalWhatsapp: document.getElementById("modalWhatsapp"),
     modalPrev: document.getElementById("modalPrev"),
     modalNext: document.getElementById("modalNext"),
     modalCounter: document.getElementById("modalCounter")
@@ -290,7 +291,7 @@
     const totalPages = Math.ceil(filtered.length / PER_PAGE);
 
     const renderPageHtml = (items, pageNum, sideClass) => {
-      const headLabel = items.length ? items[0].category : "Güzellik & Makyaj";
+      const headLabel = items.length ? items[0].category : "Ürün Kataloğu";
       const content = items.length
         ? `<div class="book-page-grid">
             ${items
@@ -311,18 +312,18 @@
           </div>`
         : `<div class="book-empty-page">
             <h3>Seçkinin Sonu</h3>
-            <p>Kataloğumuzdaki tüm ürünleri incelediniz. Dilerseniz üst menüden marka veya kategori seçerek yeniden gezinebilirsiniz.</p>
+            <p>Kataloğumuzdaki tüm ürünleri incelediniz. Sipariş ve detaylı bilgi için 0535 954 8578 numarasından veya @ozdee_cosmeticss hesabından ulaşabilirsiniz.</p>
           </div>`;
 
       return `
         <div class="book-page ${sideClass}">
           <div class="book-running-head">
-            <span>GÜZELLİK &amp; MAKYAJ KATALOĞU</span>
+            <span>ÖZDE PREMİUM KOZMETİK</span>
             <span>${escapeHtml(headLabel)}</span>
           </div>
           ${content}
           <div class="book-page-foot">
-            <span>Seçkin Koleksiyon</span>
+            <span>Ürün Kataloğu</span>
             <span>Sayfa ${padNo(pageNum)}</span>
           </div>
         </div>
@@ -417,6 +418,10 @@
     els.modalTitle.textContent = p.name;
     els.modalTag.textContent = p.tag;
     els.modalDesc.textContent = p.desc;
+    if (els.modalWhatsapp) {
+      const msg = `Merhaba Özde Premium Kozmetik, katalogdaki No. ${padNo(p.id)} - ${p.name} ürünü hakkında bilgi alabilir miyim?`;
+      els.modalWhatsapp.href = `https://wa.me/905359548578?text=${encodeURIComponent(msg)}`;
+    }
     els.modalCounter.textContent = `${state.modalIndex + 1} / ${activeModalList.length}`;
   }
 
