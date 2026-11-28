@@ -1,4 +1,4 @@
-// Otomatik oluşturulmuş katalog verisi (69 ürün)
+// Otomatik oluşturulmuş katalog verisi (74 ürün)
 window.CATALOG_PRODUCTS = [
   {
     "id": 1,
@@ -826,6 +826,66 @@ window.CATALOG_PRODUCTS = [
     "image": "images/69.jpg",
     "bg": "#faced5",
     "width": 640,
+    "height": 960
+  },
+  {
+    "id": 70,
+    "name": "Fenty Beauty Kontür Stik",
+    "brand": "Fenty Beauty",
+    "category": "Yüz & Işıltı",
+    "tag": "Kontür Stik",
+    "desc": "Kremsi-mat formülüyle ciltte kolayca dağılan ikonik stik kontür, yüz hatlarını doğal gölgelerle belirginleştirir ve uzun süre kalıcılık sunar.",
+    "image": "images/70.jpg",
+    "bg": "#fccbd6",
+    "width": 824,
+    "height": 960
+  },
+  {
+    "id": 71,
+    "name": "Gulf Girl Işıltılı Vücut ve Yüz Spreyi",
+    "brand": "Gulf Girl",
+    "category": "Yüz & Işıltı",
+    "tag": "Işıltılı Sprey",
+    "desc": "Retro pompalı şık şişesindeki ultra ince inci ışıltılı pudra spreyi, ten, dekolte ve omuzlara anında göz alıcı bir parlaklık kazandırır.",
+    "image": "images/71.jpg",
+    "bg": "#fcd0dd",
+    "width": 824,
+    "height": 960
+  },
+  {
+    "id": 72,
+    "name": "YSL Cushion Fondöten",
+    "brand": "YSL",
+    "category": "Ten & Baz",
+    "tag": "Cushion Fondöten",
+    "desc": "Kapitone siyah-altın şık aynalı kutusundaki lüks cushion fondöten, SPF 23 korumasıyla gün boyu taze, hafif ve kusursuz bir ten bitişi sağlar.",
+    "image": "images/72.jpg",
+    "bg": "#f8cacd",
+    "width": 824,
+    "height": 960
+  },
+  {
+    "id": 73,
+    "name": "NARS 12’li Göz Farı Paleti",
+    "brand": "NARS",
+    "category": "Göz & Kaş",
+    "tag": "Far Paleti",
+    "desc": "Sıcak gül kurusu, şeftali, bakır ve ışıltılı şampanya tonlarındaki 12 yüksek pigmentli farıyla hem günlük hem akşam makyajlarına zarif derinlik katar.",
+    "image": "images/73.jpg",
+    "bg": "#fdc5d2",
+    "width": 824,
+    "height": 960
+  },
+  {
+    "id": 74,
+    "name": "NARS Bronzlaştırıcı ve Aydınlatıcı Paleti",
+    "brand": "NARS",
+    "category": "Yüz & Işıltı",
+    "tag": "Yüz Paleti",
+    "desc": "Metalik bronz aynalı kutusunda sıcak bronzlaştırıcı ve altın ışıltılı aydınlatıcı tonlarını buluşturarak cilde güneşten öpülmüş canlı bir parlaklık verir.",
+    "image": "images/74.jpg",
+    "bg": "#fbc8d9",
+    "width": 824,
     "height": 960
   }
 ];
